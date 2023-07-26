@@ -4,6 +4,6 @@
   tasks:
     - name: Install Nginx
       anisible.builtin.yum:
-       name: ngnix
+       name: httpd
        state: latest
 
