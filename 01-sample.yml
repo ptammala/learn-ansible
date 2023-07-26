@@ -1,0 +1,9 @@
+- name: Installing Nginx
+  hosts: all
+  become: true
+  tasks:
+    - name: Install Nginx
+      anisible.builtin.yum:
+       name: ngnix
+       state: latest
+
