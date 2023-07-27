@@ -12,4 +12,21 @@
         name: nginx
         state: started
 
+- name: Installing Nginx
+  hosts: all
+  become: true
+  roles:
+    - sample
+    - name: Install Nginx
+      ansible.builtin.yum:
+        name: nginx
+        state: latest
+
+    - name: Starting  Nginx
+      ansible.builtin.systemd:
+        name: nginx
+        state: started
+
+
+
 
