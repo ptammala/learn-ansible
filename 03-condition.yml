@@ -1,11 +1,16 @@
 - name: Demo for Conditions
   hosts: all
   connection: local
+  vars:
+    fruit: true
+    vegitable: false
   tasks:
     - name: Fruit Name
       ansible.builtin.debug:
         msg: Fruit Name - Apple
+      when: fruit is true
 
     - name: Vegitable  Name
       ansible.builtin.debug:
         msg: Vegitable Name - Brinjal
+      when: vegitable is true
