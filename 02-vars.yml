@@ -1,8 +1,8 @@
 - name: Variable
   hosts: localhost
-  connections: local
+  connection: local
   vars:
-    URL: google.com
+    URL: play.google.com
   tasks:
     - name: Printing a variable
       ansible.builtin.debug:
