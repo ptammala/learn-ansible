@@ -1,0 +1,11 @@
+- name: Template Demo
+  hosts: localhost
+  connection: local
+  vars:
+    fruit_name: Apple
+  tasks:
+    - name: Copying a file using template
+      ansible.builtin.template:
+        src: test.txt
+        dest: /tmp/test.txt
+
