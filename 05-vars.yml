@@ -1,5 +1,5 @@
 - name: Print Variable Type
-  host: localhost
+  hosts: localhost
   connection: local
   vars:
     fruit: Apple
